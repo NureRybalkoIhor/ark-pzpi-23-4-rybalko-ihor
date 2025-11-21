@@ -1,0 +1,281 @@
+﻿МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
+ 
+ХАРКІВСЬКИЙ НАЦІОНАЛЬНИЙ
+УНІВЕРСИТЕТ РАДІОЕЛЕКТРОНІКИ
+ 
+Катедра «Програмна інженерія»
+ 
+
+
+ЗВІТ
+з практичної роботи № 2
+з дисципліни «Аналіз та рефакторинг коду»
+з теми «Методи рефакторингу коду програмного забезпечення Extract Method, Rename Method, Simplify Conditional Expressions Method на прикладі мови F#»
+ 
+ 
+ 
+Виконав                                                                             Прийняв:
+ст. гр. ПЗПІ-23-4                                                                   старший викладач ПІ
+Рибалко І. О.                                                                  Сокорчук І.П.
+ 
+  
+Харків  2025
+1 ІСТОРІЯ ЗМІН
+№
+	Дата
+	Версія звіту
+	Опис змін та виправлень
+	1
+	18.11.25
+	0.1
+	Створено розділи «Історія змін», «Завдання»
+	2
+	20.11.25
+	0.2
+	Створено розділи «Опис виконаної роботи», «Висновки», «Додаток А», «Додаток Б», «Додаток В»
+	2 ЗАВДАННЯ
+Створити, підготувати оформити у вигляді презентації у форматі .pdf доповідь на тему:  Методи рефакторингу коду програмного забезпечення.
+Студент повинен обрати 3 метода рефакторингу з книги  Мартін Р. Чистий код: створення і рефакторинг за допомогою AGILE. – ФАБУЛА, 2019. – 416 с.
+1. Презентація: - повинна бути викладена українською мовою.
+2. Звіт оформити у форматі: титульна сторінка, мета роботи, висновки, додатки.
+3. Слайди презентації включити у звіт у вигляді додатка. 
+4. Слайди презентації повинні мати чіткі номери у правому нижньому куті слайда. 
+5. Звіт повинен бути записаний у файл у форматі pdf з іменем: ark-pzpi-23-{номер групи}-{прізвище латинкою}-{ім'я латинкою}-Refactoring Methods.pdf, де: {прізвище латинкою} та {ім'я латинкою} - це прізвище та ім'я студента у його електронній адресі у домені @nure.ua 
+6. Наприклад: pzpi-22-1-petrenko-stepan-Refactoring Methods.pdf
+
+
+3 ОПИС ВИКОНАНОЇ РОБОТИ
+Під час виконання практичного завдання було детально опрацьовано тему методів рефакторингу програмного коду на прикладах, реалізованих мовою F#. Робота розпочалася зі створення титульного слайду та визначення основної мети дослідження - покращення структури та якості програмного коду шляхом застосування різних технік рефакторингу, що стало основою подальшої практичної частини (рис. Б.1).
+Далі було розглянуто загальне поняття рефакторингу, його призначення та ключові принципи. У цій частині було підкреслено, що рефакторинг дозволяє оптимізувати внутрішню структуру програми без зміни її функціональності, робить код зрозумілішим, легшим у підтримці (рис. Б.2).
+Наступним кроком було визначення та опис трьох основних методів, які аналізувалися в роботі: Extract Method, Rename Method та Simplify Conditional Expressions. У цьому блоці було окреслено суть кожного методу, його призначення та ключові переваги, що дозволяє зрозуміти, чому саме ці техніки широко застосовуються під час розробки програмного забезпечення (рис. Б.3).
+Після цього було проведено детальний аналіз прикладу для методу Extract Method. Було розглянуто великий фрагмент коду, у якому логіка обчислення середніх значень, визначення статусу та бонусів була змішана в одному методі. Виявлені проблеми включали дублювання логіки, надмірне використання змінних умовного типу mutable та складність тестування (рис. Б.4). Після рефакторингу код було поділено на окремі функції, що значно покращило структуру та читабельність (рис. Б.5).
+Також було розглянуто приклад методу Rename Method. У початковому варіанті коду використовувалися короткі, неінформативні назви змінних, через що логіку обчислення було важко зрозуміти (рис. Б.6). Після застосування методу відбулося суттєве підвищення зрозумілості коду завдяки перейменуванню змінних та функцій на такі, що чітко відображають їх призначення. (рис. Б.7).
+Метод Simplify Conditional Expressions був продемонстрований на прикладі складного каскаду умовних операторів. У вихідному варіанті код був громіздким та важким для читання (рис. Б.8). Після рефакторингу умовні конструкції були замінені більш читабельною структурою match…with, що дозволило зробити логіку компактною, наочною та простою для розширення. (рис. Б.9).
+Окремо був розглянутий блок про інструменти для рефакторингу. Було описано найпоширеніші середовища розробки та аналізатори коду, які полегшують процес рефакторингу: Visual Studio, JetBrains Rider, Eclipse, а також інструменти статичного аналізу. Для кожного інструмента було наведено його ключові можливості, корисні під час рефакторингу, що допомагає значно покращити якість коду в реальних проєктах (рис. Б.10).
+Наприкінці роботи було сформовано загальні висновки щодо важливості регулярного рефакторингу та його впливу на якість коду. Було зазначено, що рефакторинг слід проводити систематично, а не лише тоді, коли код стає складним у підтримці. Також були визначені переваги застосування базових методів рефакторингу та описано, як вони покращують розуміння всього проєкту (рис. Б.11).
+
+
+
+
+
+
+
+
+4 ВИСНОВКИ
+У ході практичного заняття було розроблено презентацію на тему методів рефакторингу програмного коду, що дозволило поглибити розуміння сучасних підходів до покращення структури, читабельності та підтримуваності програм. Під час роботи були детально розглянуті основні техніки рефакторингу: Extract Method, Rename Method та Simplify Conditional Expressions, а також виконано практичний аналіз їх застосування на прикладах коду мовою F#.
+Завдяки систематичному розбору проблем початкового коду та покроковому впровадженню вдосконалень було продемонстровано, як рефакторинг допомагає зменшити дублювання, спростити логіку, підвищити інформативність і забезпечити більш чисту архітектуру програми. Окрім цього, було вивчено інструменти, що підтримують процес рефакторингу та автоматизації аналізу коду, що є важливою частиною роботи сучасного розробника.
+Таким чином, виконане практичне завдання сприяло формуванню навичок грамотного застосування методів покращення коду, розширило розуміння принципів якісної розробки програмного забезпечення та показало важливість регулярного рефакторингу у процесі підтримки й розвитку програмних проєктів.
+
+
+
+
+
+
+
+
+
+
+5 ВИКОРИСТАНІ ДЖЕРЕЛА
+1. Clean Code: A Handbook of Agile Software Craftsmanship. O’Reilly Online Learning. URL: https://www.oreilly.com/library/view/clean-code/9780136083238/ (дата звернення: 19.11.2025).
+2. Code refactoring | IntelliJ IDEA. IntelliJ IDEA Help. URL: https://www.jetbrains.com/help/idea/refactoring-source-code.html (дата звернення: 21.11.2025).
+3. F# docs - get started, tutorials, reference. Microsoft Learn: Build skills that open doors in your career. URL: https://learn.microsoft.com/en-us/dotnet/fsharp/ (дата звернення: 21.11.2025).
+4. Refactoring: clean your code. Refactoring and Design Patterns. URL: https://refactoring.guru/refactoring (дата звернення: 21.11.2025).
+5. Refactoring. martinfowler.com. URL: https://martinfowler.com/books/refactoring.html (дата звернення: 21.11.2025).
+6. Visual Studio documentation. Microsoft Learn: Build skills that open doors in your career. URL: https://learn.microsoft.com/en-us/visualstudio/windows/?view=visualstudio (дата звернення: 21.11.2025).
+
+
+
+
+
+
+
+
+
+
+
+
+ДОДАТОК А
+Відеозапис презентації результатів практичної роботи: https://www.youtube.com/watch?v=LRl3YXVhowA 
+Хронологічний опис відеозапису:
+00:00 – Вступ
+00:38 – Рефакторинг
+01:34 – Основні методи рефакторингу
+03:02 – Метод Extract method (виділення методу), код до рефакторинга
+04:31 – Метод Extract method (виділення методу), код після рефакторинга
+06:05 – Метод Rename method (переіменування методу), код до рефакторинга
+06:41 – Метод Rename method (переіменування методу), код після рефакторинга
+07:49 – Метод Simplify conditional expressions (спрощення умовних виразів), код до рефакторинга
+08:21 – Метод Simplify conditional expressions (спрощення умовних виразів), код після рефакторинга
+09:08 – Інструменти для рефакторингу
+10:12 – Висновки
+11:19 – Використані джерела
+
+
+
+
+ДОДАТОК Б
+  
+
+Рисунок Б.1 — Слайд 1 «Методи рефакторингу коду програмного забезпечення»
+  
+
+Рисунок Б.2 — Слайд 2 «Рефакторинг»
+  
+
+Рисунок Б.3 — Слайд 3 «Основні методи рефакторингу»
+  
+
+Рисунок Б.4 — Слайд 4 «Метод Extract method (виділення методу), код до рефакторинга»
+  
+
+Рисунок Б.5 — Слайд 5 «Метод Extract method (виділення методу), код після рефакторинга»
+  
+
+Рисунок Б.6 — Слайд 6 «Метод Rename method (переіменування методу), код до рефакторинга»
+  
+
+Рисунок Б.7 — Слайд 7 «Метод Rename method (переіменування методу), код після рефакторинга»
+  
+
+Рисунок Б.8 — Слайд 8 «Метод Simplify conditional expressions (спрощення умовних виразів), код до рефакторинга»
+  
+
+Рисунок Б.9 — Слайд 9 «Метод Simplify conditional expressions (спрощення умовних виразів), код після рефакторинга»
+  
+
+Рисунок Б.10 — Слайд 10 «Інструменти для рефакторингу»
+  
+
+Рисунок Б.11 — Слайд 11 «Висновки»
+  
+
+Рисунок Б.12 — Слайд 12 «Використані джерела»
+
+
+
+
+
+
+ДОДАТОК B
+Програмний код
+GitHub репозиторій: https://github.com/NureRybalkoIhor/ark-pzpi-23-4-rybalko-ihor/blob/main/Pract2/ark-pzpi-23-4-rybalko-ihor-pract2/code-examples-refactoring-methods.fs 
+В.1 Реалізація програмного коду до рефакторинга, метод Extract method (виділення методу)
+  1 //Поганий код
+  2 type Student = { Name : string; Scores : int list; Attendance : int; Homework : int list }
+  3
+  4 let generateCourseReport (students: Student list) =
+  5     let mutable report = []
+  6     for s in students do
+  7         let scoreSum = List.sum s.Scores
+  8         let hwSum = List.sum s.Homework
+  9         let avgScore = (scoreSum + hwSum) / (List.length s.Scores + List.length s.Homework)
+ 10
+ 11         let mutable status = ""
+ 12         if avgScore > 90 && s.Attendance > 95 then
+ 13             status <- "Excellent"
+ 14         elif avgScore > 75 && s.Attendance > 80 then
+ 15             status <- "Good"
+ 16         elif avgScore > 60 && s.Attendance > 70 then
+ 17             status <- "Satisfactory"
+ 18         else
+ 19             status <- "Poor"
+ 20
+ 21         let mutable bonus = 0
+ 22         if s.Attendance > 98 then bonus <- bonus + 5
+ 23         if avgScore > 95 then bonus <- bonus + 10
+ 24
+ 25         let finalScore = avgScore + bonus
+ 26         report <- (s.Name, finalScore, status) :: report
+ 27
+ 28     report
+
+
+В.2 Реалізація програмного коду після рефакторинга, метод Extract method (виділення методу)
+  1 //Гарний код
+  2 type Student = { Name : string; Scores : int list; Attendance : int; Homework : int list }
+  3
+  4 let calculateAverage s =
+  5     let scoreSum = List.sum s.Scores
+  6     let hwSum = List.sum s.Homework
+  7     (scoreSum + hwSum) / (s.Scores.Length + s.Homework.Length)
+  8
+  9 let determineStatus avg attendance =
+ 10     match avg, attendance with
+ 11     | a, att when a > 90 && att > 95 -> "Excellent"
+ 12     | a, att when a > 75 && att > 80 -> "Good"
+ 13     | a, att when a > 60 && att > 70 -> "Satisfactory"
+ 14     | _ -> "Poor"
+ 15
+ 16 let calculateBonus avg attendance =
+ 17     let bonusAttendance = if attendance > 98 then 5 else 0
+ 18     let bonusScore = if avg > 95 then 10 else 0
+ 19     bonusAttendance + bonusScore
+ 20
+ 21 let generateCourseReport students =
+ 22     students
+ 23     |> List.map (fun s ->
+ 24         let avg = calculateAverage s
+ 25         let status = determineStatus avg s.Attendance
+ 26         let bonus = calculateBonus avg s.Attendance
+ 27         let finalScore = avg + bonus
+ 28         (s.Name, finalScore, status))
+
+
+В.3 Реалізація програмного коду до рефакторинга, метод Rename method (переіменування методу)
+  1 //Поганий код
+  2 type CourseInfo = { G : int; L : int; S : int; C : int }
+  3
+  4 let f (d: CourseInfo list) =
+  5     let mutable t = 0
+  6     for x in d do
+  7         let h1 = x.G * 2
+  8         let h2 = x.L * 3
+  9         let h3 = x.S * 1
+ 10         let h4 = x.C * 4
+ 11         let res = h1 + h2 + h3 + h4
+ 12         t <- t + res
+ 13     t
+
+
+В.4 Реалізація програмного коду після рефакторинга, метод Rename method (переіменування методу)
+  1 //Гарний код
+  2 type CourseInfo = { Grade : int; Labs : int; Seminars : int; Credits : int }
+  3
+  4 let calculateCourseScore (c: CourseInfo) =
+  5     c.Grade * 2 +
+  6     c.Labs * 3 +
+  7     c.Seminars * 1 +
+  8     c.Credits * 4
+  9
+ 10 let calculateTotalScore (courses: CourseInfo list) =
+ 11     courses
+ 12     |> List.sumBy calculateCourseScore
+
+
+В.5 Реалізація програмного коду після рефакторинга, метод Simplify conditional expressions (спрощення умовних виразів)
+  1 // Поганий код
+  2 type Student = { Name : string; Score : int; Attendance : int }
+  3
+  4 let getPerformanceStatus student =
+  5     if student.Score > 90 && student.Attendance > 95 then
+  6         "Excellent"
+  7     else if (student.Score > 75 && student.Attendance > 80) then
+  8         "Good"
+  9     else if (student.Score > 60 && student.Attendance > 70) then
+ 10         "Satisfactory"
+ 11     else if student.Score <= 60 && student.Attendance <= 70 then
+ 12         "Poor"
+ 13     else
+ 14         "Undefined"
+
+
+В.6 Реалізація програмного коду після рефакторинга, метод Simplify conditional expressions (спрощення умовних виразів)
+  1 // Гарний код
+  2 type Student = { Name : string; Score : int; Attendance : int }
+  3
+  4 let getPerformanceStatus student =
+  5     match student.Score, student.Attendance with
+  6     | score, attendance when score > 90 && attendance > 95 -> "Excellent"
+  7     | score, attendance when score > 75 && attendance > 80 -> "Good"
+  8     | score, attendance when score > 60 && attendance > 70 -> "Satisfactory"
+  9     | _ -> "Poor"
