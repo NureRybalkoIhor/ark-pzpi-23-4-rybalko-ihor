@@ -1,0 +1,22 @@
+# Ігноруємо системні файли та кеш VS
+.vs/
+*.user
+*.suo
+*.userosscache
+
+#
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+#
+*.mdf
+*.ldf
+*.ndf
+
+#
+appsettings.Development.json
+
+#
+!**/Migrations/
