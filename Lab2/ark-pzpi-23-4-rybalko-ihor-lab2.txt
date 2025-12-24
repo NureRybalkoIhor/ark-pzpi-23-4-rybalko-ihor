@@ -602,7 +602,7 @@ json{ "message": "Статус змінено на Ready"}
 7. RFC 7519: JSON Web Token (JWT). IETF Datatracker. URL: https://tools.ietf.org/html/rfc7519 (дата звернення: 08.12.2025).
 8. Web API Design Best Practices - Azure Architecture Center. Microsoft Learn: Build skills that open doors in your career. URL: https://learn.microsoft.com/uk-ua/azure/architecture/best-practices/api-design (дата звернення: 08.12.2025).
 ДОДАТОК А
-Відеозапис презентації результатів лабораторної роботи: https://youtu.be/G2ALnM-PK_I 
+Відеозапис презентації результатів лабораторної роботи: https://youtu.be/CqfEzWOsgoQ 
 Хронологічний опис відеозапису:
 00:00 – Огляд структури БД.
 02:15 – Виконання запиту до API.
@@ -638,6 +638,8 @@ json{ "message": "Статус змінено на Ready"}
 
 
 ДОДАТОК Б
+Програмний код
+GitHub репозиторій: https://github.com/NureRybalkoIhor/ark-pzpi-23-4-rybalko-ihor/tree/main/Lab2/ark-pzpi-23-4-rybalko-ihor-lab2 
 Б.1 Приклад операції  CREATE (Створення даних)
   1 [HttpPost]
   2 public async Task<ActionResult<RestaurantDto>> CreateRestaurant(CreateRestaurantDto createDto)
