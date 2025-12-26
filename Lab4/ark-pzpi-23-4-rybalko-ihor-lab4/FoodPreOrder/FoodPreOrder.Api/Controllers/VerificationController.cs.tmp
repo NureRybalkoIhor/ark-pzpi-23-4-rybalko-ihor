@@ -1,0 +1,12 @@
+РїВ»С—using FoodPreOrder.Application.DTOs.Admin;
+using FoodPreOrder.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+
+namespace FoodPreOrder.Api.Controllers
+{
+    /// <summary>
+    /// Р С™Р С•Р Р…РЎвЂљРЎР‚Р С•Р В»Р ВµРЎР‚ Р Т‘Р В»РЎРЏ Р Р†Р ВµРЎР‚Р С‘РЎвЂћРЎвЂ“Р С”Р В°РЎвЂ РЎвЂ“РЎвЂ” Р В±РЎвЂ“Р В·Р Р…Р ВµРЎРѓ-Р С”Р С•РЎР‚Р С‘РЎРѓРЎвЂљРЎС“Р Р†Р В°РЎвЂЎРЎвЂ“Р Р†.
+    /// Р вЂќР С•Р В·Р Р†Р С•Р В»РЎРЏРЎвЂќ Р С”Р С•РЎР‚Р С‘РЎРѓРЎвЂљРЎС“Р Р†Р В°РЎвЂЎР В°Р С

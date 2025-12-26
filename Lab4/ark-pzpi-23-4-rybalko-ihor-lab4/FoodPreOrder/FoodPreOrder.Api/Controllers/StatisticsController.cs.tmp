@@ -1,0 +1,15 @@
+РїВ»С—using FoodPreOrder.Api.Services;
+using FoodPreOrder.Application.DTOs.Admin;
+using FoodPreOrder.Application.Interfaces;
+using FoodPreOrder.Domain.Enums;
+using FoodPreOrder.Persistence.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+
+namespace FoodPreOrder.Api.Controllers
+{
+    /// <summary>
+    /// Р С™Р С•Р Р…РЎвЂљРЎР‚Р С•Р В»Р ВµРЎР‚ Р Т‘Р В»РЎРЏ Р В°Р Р…Р В°Р В»РЎвЂ“РЎвЂљР С‘Р С”Р С‘ РЎвЂљР В° Р В·Р Р†РЎвЂ“РЎвЂљР Р…Р С•РЎРѓРЎвЂљРЎвЂ“.
+    /// Р вЂ”Р В°Р В±Р ВµР В·Р С—Р ВµРЎвЂЎРЎС“РЎвЂќ Р С–Р ВµР Р…Р ВµРЎР‚Р В°РЎвЂ РЎвЂ“РЎР‹ РЎвЂћРЎвЂ“Р Р…Р В°Р Р…РЎРѓР С•Р Р†Р С‘РЎвЂ¦ Р В·Р Р†РЎвЂ“РЎвЂљРЎвЂ“Р Р†, Р В°Р Р…Р В°Р В»РЎвЂ“Р В· Р С—Р С•Р С—РЎС“Р В»РЎРЏРЎР‚Р Р…Р С•РЎРѓРЎвЂљРЎвЂ“ РЎРѓРЎвЂљРЎР‚Р В°Р Р† РЎвЂљР В° Р В·Р В°Р Р†Р В°Р Р…РЎвЂљР В°Р В¶Р ВµР Р…Р С•РЎРѓРЎвЂљРЎвЂ“ РЎР‚Р ВµРЎРѓРЎвЂљР С•РЎР‚Р В°Р Р…РЎС“.
+    /// Р СџРЎвЂ“Р Т‘РЎвЂљРЎР‚Р С‘Р С

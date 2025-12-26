@@ -1,0 +1,28 @@
+РїВ»С—using FoodPreOrder.Application.DTOs.Admin;
+using FoodPreOrder.Application.Interfaces;
+using FoodPreOrder.Domain.Entities;
+using FoodPreOrder.Domain.Enums;
+using FoodPreOrder.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace FoodPreOrder.Api.Services
+{
+    public class VerificationService : IVerificationService
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly IFileStorageService _fileStorage;
+
+        public VerificationService(ApplicationDbContext context, IFileStorageService fileStorage)
+        {
+            _context = context;
+            _fileStorage = fileStorage;
+        }
+
+        public async Task SubmitRequestAsync(int userId, IFormFile document)
+        {
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".pdf" };
+            var extension = Path.GetExtension(document.FileName).ToLower();
+
+            if (!allowedExtensions.Contains(extension))
+            {
+                throw new ArgumentException("Р СњР ВµР Т‘Р С•Р С—РЎС“РЎРѓРЎвЂљР С‘Р С

@@ -1,0 +1,16 @@
+РїВ»С—using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FoodPreOrder.Application.DTOs.Orders
+{
+    public class CreateOrderItemDto
+    {
+        [Required(ErrorMessage = "Р СњР ВµР С•Р В±РЎвЂ¦РЎвЂ“Р Т‘Р Р…Р С• Р Р†Р С”Р В°Р В·Р В°РЎвЂљР С‘ РЎРѓРЎвЂљРЎР‚Р В°Р Р†РЎС“ (ID)")]
+        public int DishId { get; set; }
+
+        [Required]
+        [Range(1, 100, ErrorMessage = "Р С™РЎвЂ“Р В»РЎРЉР С”РЎвЂ“РЎРѓРЎвЂљРЎРЉ Р С

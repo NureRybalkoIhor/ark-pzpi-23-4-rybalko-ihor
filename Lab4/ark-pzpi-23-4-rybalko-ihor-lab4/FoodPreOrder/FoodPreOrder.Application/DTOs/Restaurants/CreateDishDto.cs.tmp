@@ -1,0 +1,14 @@
+РїВ»С—using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+
+namespace FoodPreOrder.Application.DTOs.Restaurants
+{
+    public class CreateDishDto
+    {
+        [Required(ErrorMessage = "Р СњР В°Р В·Р Р†Р В° РЎРѓРЎвЂљРЎР‚Р В°Р Р†Р С‘ РЎвЂќ Р С•Р В±Р С•Р Р†'РЎРЏР В·Р С”Р С•Р Р†Р С•РЎР‹")]
+        [MaxLength(100, ErrorMessage = "Р СњР В°Р В·Р Р†Р В° Р Р…Р Вµ Р С

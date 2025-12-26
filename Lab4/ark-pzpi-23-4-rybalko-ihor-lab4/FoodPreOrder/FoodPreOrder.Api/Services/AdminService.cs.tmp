@@ -1,0 +1,30 @@
+РїВ»С—using FoodPreOrder.Application.DTOs.Admin;
+using FoodPreOrder.Application.Interfaces;
+using FoodPreOrder.Domain.Entities;
+using FoodPreOrder.Domain.Enums;
+using FoodPreOrder.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace FoodPreOrder.Api.Services
+{
+    public class AdminService : IAdminService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public AdminService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<bool> BlockUserAsync(int adminId, BlockUserDto dto)
+        {
+            var user = await _context.Users.FindAsync(dto.UserId);
+            if (user == null) return false;
+
+            if (user.Role == UserRole.Admin)
+            {
+                throw new InvalidOperationException("Р С’Р Т‘Р С

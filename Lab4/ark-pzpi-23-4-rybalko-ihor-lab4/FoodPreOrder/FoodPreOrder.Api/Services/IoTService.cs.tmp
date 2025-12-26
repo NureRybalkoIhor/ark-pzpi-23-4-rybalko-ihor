@@ -1,0 +1,27 @@
+РїВ»С—using FoodPreOrder.Application.DTOs.IoT;
+using FoodPreOrder.Domain.Entities;
+using FoodPreOrder.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace FoodPreOrder.Api.Services
+{
+    public class IoTService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public IoTService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IoTDevice> RegisterDeviceAsync(CreateIoTDeviceDto dto)
+        {
+            var existing = await _context.IoTDevices
+                .FirstOrDefaultAsync(d => d.SerialNumber == dto.SerialNumber);
+
+            if (existing != null)
+                throw new Exception($"Р СџРЎР‚Р С‘РЎРѓРЎвЂљРЎР‚РЎвЂ“Р в„– Р В· РЎРѓР ВµРЎР‚РЎвЂ“Р в„–Р Р…Р С‘Р С

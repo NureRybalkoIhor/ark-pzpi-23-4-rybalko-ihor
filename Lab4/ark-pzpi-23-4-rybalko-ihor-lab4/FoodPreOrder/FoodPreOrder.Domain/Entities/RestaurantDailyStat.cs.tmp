@@ -1,0 +1,20 @@
+РїВ»С—using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FoodPreOrder.Domain.Entities
+{
+    public class RestaurantDailyStat
+    {
+        public int Id { get; set; }
+        public int RestaurantId { get; set; }
+        public Restaurant? Restaurant { get; set; }
+
+        public DateTime Date { get; set; }
+        public int TotalOrders { get; set; }        // Р вЂ™РЎРѓРЎРЉР С•Р С–Р С•
+        public int SuccessfulOrders { get; set; }   // Р вЂ™Р С‘Р С”Р С•Р Р…Р В°Р Р…Р С‘РЎвЂ¦
+        public int CancelledOrders { get; set; }    // Р РЋР С”Р В°РЎРѓР С•Р Р†Р В°Р Р…Р С‘РЎвЂ¦
+
+        // --- Р вЂ

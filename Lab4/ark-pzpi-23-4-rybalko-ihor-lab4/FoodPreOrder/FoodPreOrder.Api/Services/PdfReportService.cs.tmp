@@ -1,0 +1,32 @@
+РїВ»С—using FoodPreOrder.Application.DTOs.Admin;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+
+namespace FoodPreOrder.Api.Services
+{
+    public class PdfReportService
+    {
+        public PdfReportService()
+        {
+            QuestPDF.Settings.License = LicenseType.Community;
+        }
+
+        public byte[] GenerateFinancialReport(string restaurantName, DateTime from, DateTime to, List<DailyStatsDto> stats)
+        {
+            return CreateDocument(restaurantName, $"Р В¤РЎвЂ“Р Р…Р В°Р Р…РЎРѓР С•Р Р†Р С‘Р в„– Р вЂ”Р Р†РЎвЂ“РЎвЂљ ({from:dd.MM} - {to:dd.MM})", container =>
+            {
+                container.Table(table =>
+                {
+                    table.ColumnsDefinition(columns =>
+                    {
+                        columns.ConstantColumn(80);
+                        columns.RelativeColumn();
+                        columns.RelativeColumn();
+                        columns.RelativeColumn();
+                    });
+
+                    table.Header(header =>
+                    {
+                        header.Cell().Element(HeaderStyle).Text("Р вЂќР В°РЎвЂљР В°");
+                        header.Cell().Element(HeaderStyle).Text("Р вЂ”Р В°Р С

@@ -1,0 +1,15 @@
+РїВ»С—using FoodPreOrder.Api.Services;
+using FoodPreOrder.Application.DTOs.IoT;
+using FoodPreOrder.Domain.Enums;
+using FoodPreOrder.Persistence.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
+namespace FoodPreOrder.Api.Controllers
+{
+    /// <summary>
+    /// Р С™Р С•Р Р…РЎвЂљРЎР‚Р С•Р В»Р ВµРЎР‚ Р Т‘Р В»РЎРЏ РЎС“Р С—РЎР‚Р В°Р Р†Р В»РЎвЂ“Р Р…Р Р…РЎРЏ РЎвЂћРЎвЂ“Р В·Р С‘РЎвЂЎР Р…Р С‘Р С
