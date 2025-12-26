@@ -1,0 +1,11 @@
+iot:
+    container_name: food-preorder-iot
+    build:
+      context: ./IoT
+      dockerfile: Dockerfile
+    volumes:
+      - ./IoT:/app
+    depends_on:
+      - api
+    networks:
+      - food-preorder-network
